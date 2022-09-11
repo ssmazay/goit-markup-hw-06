@@ -58,7 +58,7 @@ img {
 
 .link {
   text-decoration: none;
-  color: currentColor;
+  /* color: currentColor; */
 }
 
 nav {
@@ -151,7 +151,7 @@ nav {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2%;
   display: block;
   width: 100%;
   height: 4px;
@@ -209,6 +209,7 @@ nav {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
+  border-radius: 4px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -297,14 +298,13 @@ nav {
   bottom: 0;
   width: 100%;
   height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(47, 48, 58, 0.8);
 }
 
 .work-name-heading {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -312,6 +312,7 @@ nav {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-txt-cl);
+  margin: 0;
 }
 
 /* team  */
@@ -384,9 +385,10 @@ nav {
   justify-content: center;
   background-color: var(--main-bg-cl);
   fill: #afb1b8;
-
   width: 100%;
   height: 100%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -394,7 +396,6 @@ nav {
   background-color: var(--link-txt-cl);
   border-radius: 50%;
   fill: var(--main-bg-cl);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icon:hover,
@@ -480,7 +481,7 @@ nav {
 }
 
 .footer-adress-div {
-  padding-right: 70px;
+  margin-right: 70px;
 }
 
 .footer-adress {
@@ -502,6 +503,10 @@ nav {
 }
 .link-cl {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-icon-div {
+  margin-right: 93px;
 }
 
 .footer-icon-name {
@@ -548,6 +553,58 @@ nav {
   height: 44px;
 }
 
+.form-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-bg-cl);
+  margin-bottom: 20px;
+}
+
+.sign-div {
+  display: flex;
+}
+
+.mail {
+  width: 358px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  border: none;
+  margin: 0;
+  border-radius: 4px;
+  background-color: var(--link-txt-cl);
+  padding: 10px 28px;
+  color: var(--white-txt-cl);
+  cursor: pointer;
+}
+
+.send {
+  margin-left: 10px;
+  fill: var(--main-bg-cl);
+}
+
+/* .sign::after {
+  content: "";
+  display: inline-block;
+} */
+
 /*Portfolio*/
 
 .projects {
@@ -573,6 +630,7 @@ nav {
   letter-spacing: 0.03em;
   cursor: pointer;
   border: none;
+  border-radius: 4px;
   padding: 6px 22px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -651,6 +709,7 @@ nav {
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  color: var(--main-txt-cl);
 }
 .project-filters {
   color: var(--secondary-txt-cl);
@@ -672,7 +731,8 @@ nav {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
