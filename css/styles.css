@@ -386,6 +386,7 @@ nav {
   fill: #afb1b8;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -393,7 +394,6 @@ nav {
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--link-txt-cl);
-  border-radius: 50%;
   fill: var(--main-bg-cl);
 }
 
@@ -552,7 +552,7 @@ nav {
   height: 44px;
 }
 
-.form-name {
+.form-footer-name {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -572,12 +572,18 @@ nav {
   margin-right: 12px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  /* box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15)); */
   border-radius: 4px;
   border-color: rgba(255, 255, 255, 0.3);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sign {
+.mail:focus,
+.mail:hover {
+  border-color: var(--link-txt-cl);
+}
+
+.sign-btn {
   display: flex;
   align-items: center;
   text-align: center;
@@ -592,6 +598,11 @@ nav {
   padding: 10px 28px;
   color: var(--white-txt-cl);
   cursor: pointer;
+}
+
+.sign-btn:focus,
+.sign-btn:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .send {
@@ -774,6 +785,7 @@ nav {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:focus,
@@ -808,7 +820,7 @@ nav {
   display: block;
 }
 
-.form-name {
+.form-modal-name {
   display: inline-block;
   font-weight: 400;
   font-size: 12px;
@@ -816,7 +828,6 @@ nav {
   letter-spacing: 0.01em;
   color: var(--secondary-txt-cl);
   margin-bottom: 4px;
-  text-transform: capitalize;
 }
 
 .input-form {
@@ -825,6 +836,7 @@ nav {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-form:focus,
@@ -839,11 +851,23 @@ textarea {
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textarea:focus,
 textarea:hover {
   border-color: var(--link-txt-cl);
+}
+
+.chbox {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+
+.chbox-link {
+  color: var(--link-txt-cl);
+  text-decoration: dashed;
 }
 
 .submit-btn {
@@ -861,13 +885,16 @@ textarea:hover {
   justify-content: center;
   letter-spacing: 0.06em;
   color: var(--white-txt-cl);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: 0;
+  padding: 0;
   margin: auto;
   margin-top: 20px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .submit-btn:hover,
 .submit-btn:focus {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #188ce8;
 }
